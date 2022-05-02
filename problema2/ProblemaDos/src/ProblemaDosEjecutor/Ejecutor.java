@@ -13,30 +13,41 @@ import ProblemaDosEquivalente.EquivalenteHora;
 public class Ejecutor {
 
     public static void main(String[] args) {
-        EquivalenteHora t = new EquivalenteHora();
+        EquivalenteHora tiempo = new EquivalenteHora();
+        EquivalenteHora tiempoDos = new EquivalenteHora();
 
         // Valores de entrada
-        double valorMetro = 500;
-        double ancho = 20;
-        double largo = 30;
+        double horas = 30;
+        double horasDos = 45.50;
 
         // uso de los métodos establecer para darle valores a los 
         // atributos del objeto.
-        t.establecerValor_Metro_Cuadrado(valorMetro);
-        t.establecerAncho(ancho);
-        t.establecerLargo(largo);
+        tiempo.establecerHoras(horas);
+        tiempo.establecerDias();
+        tiempo.establecerMinutos();
+        tiempo.establecerSegundos();
+        
+        tiempoDos.establecerHoras(horasDos);
+        tiempoDos.establecerDias();
+        tiempoDos.establecerMinutos();
+        tiempoDos.establecerSegundos();
 
-        t.establecerArea();
-        t.establecerCosto_Terreno();
 
-        System.out.printf("Factura Del Terreno\n\nValor del metro cuadrado: %.2f\n"
-                + "Datos del ancho: %.2f\nDatos del Largo: %.2f\n"
-                + "area del terreno: %.2f\nCosto del terreno: %.2f\n",
-                t.obtenerValor_Metro_Cuadrado(),
-                t.obtenerAncho(),
-                t.obtenerLargo(),
-                t.obtenerArea(),
-                t.obtenerCosto_Terreno());
+        System.out.printf("Transformacion De Unidades\n\nValor de horas: %.2f\n"
+                + "Valor Horas a Dias: %.2f\nValor Horas a Minutos: %.2f\n"
+                + "Valor Horas a Segundos: %.2f\n",
+                tiempo.obtenerHoras(),
+                tiempo.obtenerDias(),
+                tiempo.obtenerMinutos(),
+                tiempo.obtenerSegundos());
+        
+        System.out.printf("Transformacion De Unidades\n\nValor de horas: %.2f\n"
+                + "Valor Horas a Dias: %.2f\nValor Horas a Minutos: %.2f\n"
+                + "Valor Horas a Segundos: %.2f\n",
+                tiempoDos.obtenerHoras(),
+                tiempoDos.obtenerDias(),
+                tiempoDos.obtenerMinutos(),
+                tiempoDos.obtenerSegundos());
     }
 
 }

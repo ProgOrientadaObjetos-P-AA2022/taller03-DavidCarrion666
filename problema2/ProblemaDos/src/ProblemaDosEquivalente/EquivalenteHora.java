@@ -9,52 +9,44 @@ package ProblemaDosEquivalente;
  * @author UTPL
  */
 public class EquivalenteHora {
-    private double costoTerreno;
-    private double ancho;
-    private double largo;
-    private double area;
-    private double valor_Metro_Cuadrado;
 
-    public void establecerValor_Metro_Cuadrado(double c) {
-        valor_Metro_Cuadrado = c;
+    private double horas;
+    private double segundos;
+    private double minutos;
+    private double dias;
+
+    public void establecerHoras(double c) {
+        horas = c;
     }
 
-    public void establecerAncho(double c) {
-        ancho = c;
+    public void establecerSegundos() {
+        segundos = (horas * 3600);
     }
 
-    public void establecerLargo(double c) {
-        largo = c;
+    public void establecerMinutos() {
+        minutos = (horas * 60);
     }
 
-    public void establecerArea() {
-        area = ancho * largo;
-    }
-
-    public void establecerCosto_Terreno() {
-        costoTerreno = valor_Metro_Cuadrado * area;
+    public void establecerDias() {
+        dias = (horas / 24);
     }
 
     // -------------------------------------------------------------------------
     
-    public double obtenerValor_Metro_Cuadrado() {
-        return valor_Metro_Cuadrado;
+    public double obtenerHoras() {
+        return horas;
     }
 
-    public double obtenerAncho() {
-        return ancho;
+    public double obtenerSegundos() {
+        return segundos;
     }
 
-    public double obtenerLargo() {
-        return largo;
+    public double obtenerMinutos() {
+        return minutos;
     }
 
-    public double obtenerArea() {
-        return area;
+    public double obtenerDias() {
+        return dias;
     }
 
-    public double obtenerCosto_Terreno() {
-        return costoTerreno;
-    }
-    
 }
